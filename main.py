@@ -57,10 +57,15 @@ async def upload_form(request: Request):
 
 @app.post('/upload')
 async def upload_video(request: Request, title: str = File(...), video_file: UploadFile = File(...)):
+    file_extension = video_file.filename.split('.')[-1]
+
+    if not file_extension.lower() in ['.mp4', '.mkv', '.avi', '.mov', '.flv', '.wmv', '.webm']:
+        return templates.TemplateResponse('upload.html', {'request': request, 'message': 'Only video files are allowed.'})
+    
+    file_name = f"{title.replace(' ', '_')}.{file_extension}"
+    
     contents = await video_file.read()
     
-    file_extension = video_file.filename.split('.')[-1]
-    file_name = f"{title.replace(' ', '_')}.{file_extension}"
     res = supabase.storage.from_(SUPABASE_BUCKET).upload(
         file_name,
         contents,
