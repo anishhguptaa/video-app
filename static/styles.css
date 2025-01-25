@@ -1,0 +1,171 @@
+/* static/styles.css */
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f8ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #080a0c;
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 1000;
+    font-size: xx-large;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-nav a:hover {
+    color: #adb5bd;
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #000000;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0d6efd;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background-color: #000000;
+    color: whitesmoke;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* Lists */
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 1rem;
+   
+    border-bottom: none;
+}
+
+
+.list-group-item a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+/* Video Player */
+video {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Messages */
+.alert {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+
+/* Utility Classes */
+.mt-1 { margin-top: 1rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 1.5rem; }
